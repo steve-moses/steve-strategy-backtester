@@ -1,0 +1,17 @@
+__pycache__
+*.pyc
+*.pyo
+.git
+.gitignore
+.env
+.venv
+.streamlit_crypto
+node_modules
+frontend/node_modules
+frontend/.next
+frontend/out
+.DS_Store
+*.joblib
+CLAUDE.md
+README.md
+.claude

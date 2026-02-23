@@ -1,0 +1,9 @@
+streamlit
+pandas
+numpy
+joblib
+plotly
+requests
+scipy
+Xgboost
+tqdm
