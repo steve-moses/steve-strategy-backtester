@@ -6,7 +6,6 @@ COPY api/requirements.txt ./api/requirements.txt
 RUN pip install --no-cache-dir -r api/requirements.txt
 
 COPY api/ ./api/
-COPY ml/artifacts/ ./ml/artifacts/
 
 EXPOSE 8000
 
