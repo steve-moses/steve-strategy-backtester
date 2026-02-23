@@ -18,8 +18,10 @@ def simulate_var(
     mc_var = float(sorted_returns[var_idx])
 
     cov_matrix = np.cov(returns_matrix, rowvar=False)
+    n_assets = returns_matrix.shape[1] if returns_matrix.ndim > 1 else 1
+    if cov_matrix.ndim < 2:
+        cov_matrix = np.atleast_2d(cov_matrix)
     L = np.linalg.cholesky(cov_matrix)
-    n_assets = returns_matrix.shape[1]
     random_normals = norm.rvs(size=(num_simulations, n_assets))
     cholesky_sim = random_normals @ L.T
     cholesky_portfolio = cholesky_sim.mean(axis=1)
