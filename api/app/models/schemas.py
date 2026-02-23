@@ -66,30 +66,3 @@ class PresetConfig(BaseModel):
     name: str
     description: str
     config: IndexConfig
-
-
-class ModelPrediction(BaseModel):
-    model_name: str
-    dates: list[str]
-    predicted: list[float]
-    metrics: dict[str, float]
-
-
-class ForecastModelEntry(BaseModel):
-    model_name: str
-    predicted: list[float]
-
-
-class ForecastData(BaseModel):
-    dates: list[str]
-    trailing_dates: list[str]
-    trailing_values: list[float]
-    models: list[ForecastModelEntry]
-
-
-class PredictionsResponse(BaseModel):
-    actual_dates: list[str]
-    actual_values: list[float]
-    predictions: list[ModelPrediction]
-    forecast: ForecastData | None = None
-    metadata: dict

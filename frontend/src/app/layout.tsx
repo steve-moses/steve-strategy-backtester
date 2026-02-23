@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Sidebar } from "@/components/layout/sidebar";
-import { MobileNav } from "@/components/layout/mobile-nav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Crypto Index Dashboard",
   description:
-    "Configurable cryptocurrency portfolio index with analytics, technical indicators, and ML forecasting.",
+    "Configurable cryptocurrency portfolio index with analytics and technical indicators.",
 };
 
 export default function RootLayout({
@@ -30,13 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="flex h-screen overflow-hidden">
-          <Sidebar />
-          <main className="flex-1 overflow-y-auto pb-16 md:pb-0">
-            <div className="mx-auto max-w-7xl p-6">{children}</div>
-          </main>
-        </div>
-        <MobileNav />
+        <main className="min-h-screen">
+          <div className="mx-auto max-w-7xl p-6">{children}</div>
+        </main>
       </body>
     </html>
   );
