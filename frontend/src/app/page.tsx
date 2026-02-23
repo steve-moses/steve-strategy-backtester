@@ -493,8 +493,8 @@ export default function DashboardPage(): React.ReactElement {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold">Steve's Strategy Builder</h1>
-          <p className="text-sm text-muted-foreground">
-            Custom Portfolio Index
+          <p className="text-sm text-muted-foreground max-w-xl">
+            Build and backtest custom crypto portfolio indices. Pick assets, set weights, compare against the S&P 500, and analyze with technical indicators and Monte Carlo VaR.
           </p>
         </div>
         <div className="flex items-center gap-2">
