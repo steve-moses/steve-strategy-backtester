@@ -491,13 +491,10 @@ export default function DashboardPage(): React.ReactElement {
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-bold">Steve's Strategy Builder</h1>
-          <p className="text-sm text-muted-foreground max-w-xl">
-            Build and backtest custom crypto portfolio indices. Pick assets, set weights, compare against the S&P 500, and analyze with technical indicators and Monte Carlo VaR.
-          </p>
-        </div>
-        <div className="flex items-center gap-2">
+        <p className="text-sm text-muted-foreground">
+          Build and backtest custom portfolios. Select assets, adjust weights, benchmark against the S&P 500, and assess risk with technical indicators and Monte Carlo VaR.
+        </p>
+        <div className="flex items-center gap-2 shrink-0">
           <Button variant="outline" size="sm" onClick={() => {
             resetConfig();
             setStagedAssets(DEFAULT_ASSETS);
