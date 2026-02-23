@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Crypto Index Dashboard",
+  title: "Steve's Strategy Builder",
   description:
     "Configurable cryptocurrency portfolio index with analytics and technical indicators.",
 };

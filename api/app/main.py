@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from api.app.config import get_settings
 from api.app.routers import market_data, index, indicators, var
 
-app = FastAPI(title="Crypto Index API", version="1.0.0")
+app = FastAPI(title="Steve's Strategy Builder API", version="1.0.0")
 
 settings = get_settings()
 origins = [o.strip() for o in settings.allowed_origins.split(",")]
